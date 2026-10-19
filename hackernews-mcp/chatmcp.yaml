@@ -1,0 +1,25 @@
+name: hackernews-mcp
+description: MCP stdio demo returning fixed mock Hacker News stories. No API key required.
+author: https://github.com/Aemeath-mc/mcp.git
+license: MIT
+tags:
+  - hackernews
+  - mcp
+  - news
+
+params:
+  type: object
+  properties: {}
+
+local: |
+  python server.py
+
+config: |
+  {
+    "mcpServers": {
+      "hackernews": {
+        "command": "python",
+        "args": ["server.py"]
+      }
+    }
+  }
